@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Deca:wght@400&display=swap');
+
+:root {
+  --color-bg: hsl(233, 47%, 7%);
+  --color-bg-card: hsl(244, 38%, 16%);
+  --color-accent: hsl(277, 64%, 61%);
+  --color-text: hsla(0, 0%, 100%, 0.75);
+  --color-text-stats: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+  font-family: 'Deca', sans-serif;
+  font-size: 15px;
+  padding: 1rem;
+  margin: 0;
+}
