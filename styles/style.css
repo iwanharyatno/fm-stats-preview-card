@@ -24,22 +24,13 @@ body {
 }
 
 .image-header {
-  position: relative;
-  background-image: url('https://iwanharyatno.github.io/fm-stats-preview-card/images/image-header-desktop.jpg');
-  background-size: cover;
-  min-height: 18rem;
   border-radius: 0.5rem 0.5rem 0 0;
+  background-color: var(--color-accent);
 }
 
-.image-header::after {
-  content: "";
-  background-color: hsla(277, 64%, 36%, 0.5);
-  position: absolute;
-  top: 0;
-  left: 0;
+.image-header img {
   width: 100%;
-  height: 100%;
-  border-radius: 0.5rem 0.5rem 0 0;
+  mix-blend-mode: multiply;
 }
 
 .preview-content {
@@ -111,8 +102,9 @@ body {
     width: calc(50% + 6rem);
     border-radius: 0 0.5rem 0.5rem 0;
   }
-  .image-header::after {
+  .image-header img {
     border-radius: 0 0.5rem 0.5rem 0;
+    height: 100%;
   }
   .stats-preview-card {
     flex-direction: row-reverse;
