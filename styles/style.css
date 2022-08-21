@@ -9,8 +9,124 @@
 }
 
 body {
-  font-family: 'Deca', sans-serif;
+  font-family: 'Inter', sans-serif;
   font-size: 15px;
-  padding: 1rem;
+  padding: 1.5rem;
   margin: 0;
+  background-color: var(--color-bg);
+}
+
+.stats-preview-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-card);
+  border-radius: 0.5rem;
+}
+
+.image-header {
+  position: relative;
+  background-image: url('/images/image-header-desktop.jpg');
+  background-size: cover;
+  min-height: 18rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.image-header::after {
+  content: "";
+  background-color: hsla(277, 64%, 36%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.preview-content {
+  padding: 1.5rem;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.preview-title {
+  font-size: 2rem;
+  margin: 0;
+  color: #fff;
+}
+
+.accent-highlight {
+  color: var(--color-accent);
+}
+
+.preview-description {
+  color: var(--color-text);
+  line-height: 1.5rem;
+}
+
+.preview-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.preview-stat {
+  padding: 1rem 0;
+}
+
+.stat-value,
+.stat-name {
+  display: block;
+}
+
+.stat-name {
+  font-family: 'Deca', sans-serif;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
+}
+
+.stat-value {
+  font-weight: bold;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .preview-title {
+    margin-bottom: 1.5rem;
+  }
+  .preview-content {
+    text-align: left;
+    padding: 3rem;
+    width: 50%;
+  }
+  .preview-description {
+    width: 87%;
+  }
+  .preview-stats {
+    justify-content: space-between;
+    width: 87%;
+  }
+  .image-header {
+    width: calc(50% + 6rem);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .image-header::after {
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .stats-preview-card {
+    flex-direction: row-reverse;
+    max-width: 55rem;
+    margin: auto;
+  }
+  .preview-stats {
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  .center {
+    position: absolute;
+    left: calc(50vw - 27.5rem);
+    top: 50vh;
+    transform: translateY(-50%);
+  }
 }
